@@ -1,7 +1,9 @@
 #First test of BattleShip
 
+#!/user/bin/python
 from random import randint
 
+# create the sea board 5x5
 board = []
 
 for x in range(0, 5):
@@ -13,6 +15,7 @@ def print_board(board):
 
 print_board(board)
 
+# random position of the ship
 def random_row(board):
   return randint(0, len(board) - 1)
 
@@ -21,11 +24,10 @@ def random_col(board):
 
 ship_row = random_row(board)
 ship_col = random_col(board)
-print ship_row
-print ship_col
+#print ship_row
+#print ship_col
 
-# Everything from here on should be in your for loop
-# don't forget to properly indent!
+#
 for turn in range(4):
   print "Turn", turn + 1
   guess_row = int(raw_input("Guess Row: "))
