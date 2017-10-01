@@ -27,15 +27,17 @@ ship_col = random_col(board)
 #print ship_row
 #print ship_col
 
-#
+# Input player guess for 4 tries(turns)
 for turn in range(4):
   print "Turn", turn + 1
   guess_row = int(raw_input("Guess Row: "))
   guess_col = int(raw_input("Guess Col: "))
-
+# check answer
+  # if correct
   if guess_row == ship_row and guess_col == ship_col:
     print "Congratulations! You sank my battleship!"
     break
+  # if not correct
   else:
     if guess_row not in range(5) or \
       guess_col not in range(5):
